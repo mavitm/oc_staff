@@ -1,4 +1,4 @@
-name: StafAre
+name: StaffArea
 form: $/mavitm/staff/models/staff/fields.yaml
 modelClass: Mavitm\Staff\Models\Staff
 defaultRedirect: mavitm/staff/staffare

@@ -1,6 +1,6 @@
 list: $/mavitm/staff/models/staff/columns.yaml
 modelClass: Mavitm\Staff\Models\Staff
-title: StafAre
+title: StaffArea
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true
