@@ -1,0 +1,15 @@
+<div class="person" data-id="<?=$person->id;?>"  data-name="<?=$person->name;?> <?=$person->surname;?>" data-title="<?=$person->title;?>">
+    <div class="row">
+        <div class="col-md-12">
+            <?php if(!empty($person->photo->id)){;?>
+            <img src="<?=$person->photo->path;?>" alt="image" style="width: 100%; margin-bottom: 15px;">
+            <?php }?>
+        </div>
+        <div class="col-md-12">
+            <p><strong><?=$person->name;?> <?=$person->surname;?></strong></p>
+            <p><?=$person->title;?></p>
+            <p><?=$person->email;?></p>
+        </div>
+    </div>
+    <input type="hidden" name="person[]" value="<?=$person->id;?>">
+</div>

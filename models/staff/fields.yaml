@@ -1,0 +1,72 @@
+fields:
+    name:
+        label: 'mavitm.staff::lang.staff.name'
+        span: auto
+        type: text
+    surname:
+        label: 'mavitm.staff::lang.staff.surname'
+        span: auto
+        type: text
+    dob:
+        label: 'mavitm.staff::lang.staff.dob'
+        mode: date
+        span: auto
+        type: datepicker
+    title:
+        label: 'mavitm.staff::lang.staff.title'
+        span: auto
+        type: text
+    department_id:
+        label: 'mavitm.staff::lang.menu.deparments'
+        emptyOption: '--'
+        span: auto
+        type: dropdown
+    email:
+        label: 'mavitm.staff::lang.staff.email'
+        span: auto
+        type: text
+    country:
+        label: 'mavitm.staff::lang.staff.country'
+        span: left
+        type: text
+    city:
+        label: 'mavitm.staff::lang.staff.city'
+        span: auto
+        type: text
+tabs:
+    fields:
+        biography:
+            label: 'mavitm.staff::lang.staff.biography'
+            size: large
+            span: full
+            type: richeditor
+            tab: 'mavitm.staff::lang.staff.biography'
+        capabilities:
+            label: 'mavitm.staff::lang.staff.capabilities'
+            prompt: 'Add new item'
+            span: full
+            type: repeater
+            tab: 'mavitm.staff::lang.staff.capabilities'
+            form:
+                fields:
+                    ability:
+                        label: 'mavitm.staff::lang.staff.ability'
+                        span: auto
+                        type: text
+                    ability_percent:
+                        label: 'mavitm.staff::lang.staff.ability_percent'
+                        span: auto
+                        type: number
+secondaryTabs:
+    fields:
+        photo:
+            label: 'mavitm.staff::lang.staff.photo'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: left
+            type: fileupload
+            imageHeight: 260
+            imageWidth: 260

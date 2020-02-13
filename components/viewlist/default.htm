@@ -1,0 +1,46 @@
+<h1 class="page-header">{{ row.name }}</h1>
+<div class="container-fluid">
+{% for row in rows %}
+
+    {% if row.name %}
+        <div class="page-header text-center">{{ row.name }}</div>
+    {% endif %}
+
+    <div class="row justify-content-md-center persons-row">
+        {% for col in row.cols %}
+            <div class="col-md-{{ col.class }}">
+                <div class="m-auto staff-item-max-width staff-item">
+                    <div class="staff-photo">
+                        {% if detailViewType == 'modal' %}
+                            <a data-request="onViewModalPerson" data-request-data="id:{{ col.person.id }}" data-request-flash="">
+                        {% else %}
+                            <a href="{{ col.person.url }}">
+                        {% endif %}
+                            <img src="{{ col.person.photo.getThumb(photoListW, photeListH, 'crop') }}" alt="">
+                        </a>
+                    </div>
+                    <div class="staff-item-property">
+                        <h3 class="person-name">{{ col.person.name }} {{ col.person.surname }}</h3>
+                        {% if staffSettings.show_title == 1 %}
+                            <p class="person-title">{{ col.person.title }}</p>
+                        {% endif %}
+
+                        {% if col.person.other_values.links is not empty %}
+                            <ul class="person-social-links row">
+                                {% for brand,link in col.person.other_values.links if link is not empty %}
+                                    <li class="col"><a href="{{ link }}" target="_blank"><i class="{{ staffSettings.social_icons[brand] }}"></i></a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+</div>
+
+{% if includeStaffModal %}
+    {% partial '@modal' %}
+{% endif %}

@@ -1,0 +1,51 @@
+fields:
+    show_dob:
+        label: 'mavitm.staff::lang.settings.show_dob'
+        span: auto
+        default: 1
+        type: switch
+    show_title:
+        label: 'mavitm.staff::lang.settings.show_title'
+        span: auto
+        default: 1
+        type: switch
+    show_email:
+        label: 'mavitm.staff::lang.settings.show_email'
+        span: auto
+        default: 1
+        type: switch
+    show_country:
+        label: 'mavitm.staff::lang.settings.show_country'
+        span: auto
+        default: 1
+        type: switch
+    show_biography:
+        label: 'mavitm.staff::lang.settings.show_biography'
+        span: auto
+        default: 1
+        type: switch
+    show_capabilities:
+        label: 'mavitm.staff::lang.settings.show_capabilities'
+        span: auto
+        default: 1
+        type: switch
+tabs:
+    fields:
+        social_links:
+            label: 'mavitm.staff::lang.department.social_links'
+            prompt: 'Add new item'
+            span: full
+            type: repeater
+            tab: 'mavitm.staff::lang.department.social_links'
+            form:
+                fields:
+                    name:
+                        label: 'mavitm.staff::lang.settings.social_name'
+                        span: auto
+                        type: text
+                        comment: 'facebook, twitter ...'
+                    css_class:
+                        label: 'mavitm.staff::lang.settings.css_class_name'
+                        span: auto
+                        type: text
+                        comment: 'fa fa-facebook, fa fa-twitter ...'

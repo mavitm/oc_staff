@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table mavitm_staff_records'
+    - builder_table_create_mavitm_staff_records.php
+1.0.3:
+    - 'Created table mavitm_staff_options'
+    - builder_table_create_mavitm_staff_options.php

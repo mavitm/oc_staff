@@ -1,0 +1,10 @@
+name: StafAre
+form: $/mavitm/staff/models/staff/fields.yaml
+modelClass: Mavitm\Staff\Models\Staff
+defaultRedirect: mavitm/staff/staffare
+create:
+    redirect: 'mavitm/staff/staffare/update/:id'
+    redirectClose: mavitm/staff/staffare
+update:
+    redirect: mavitm/staff/staffare
+    redirectClose: mavitm/staff/staffare

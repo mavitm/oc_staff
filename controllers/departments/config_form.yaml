@@ -1,0 +1,11 @@
+name: Departments
+modelClass: Mavitm\Staff\Models\Property
+form: $/mavitm/staff/models/property/department_fields.yaml
+defaultRedirect: mavitm/staff/departments
+create:
+    redirect: 'mavitm/staff/departments/update/:id'
+    redirectClose: mavitm/staff/departments
+update:
+    redirect: mavitm/staff/departments
+    redirectClose: mavitm/staff/departments
+preview: {  }

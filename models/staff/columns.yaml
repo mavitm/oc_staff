@@ -1,0 +1,40 @@
+columns:
+    id:
+        label: id
+        type: number
+        sortable: true
+    name:
+        label: 'mavitm.staff::lang.staff.name'
+        type: text
+        searchable: true
+        sortable: false
+    surname:
+        label: 'mavitm.staff::lang.staff.surname'
+        type: text
+        searchable: true
+        sortable: false
+    dob:
+        label: 'mavitm.staff::lang.staff.dob'
+        type: text
+        invisible: true
+        sortable: true
+    title:
+        label: 'mavitm.staff::lang.staff.title'
+        type: text
+        searchable: true
+        sortable: false
+    country:
+        label: 'mavitm.staff::lang.staff.country'
+        type: text
+        invisible: true
+        sortable: false
+    city:
+        label: 'mavitm.staff::lang.staff.city'
+        type: text
+        invisible: true
+        sortable: false
+    email:
+        label: 'mavitm.staff::lang.staff.email'
+        type: text
+        searchable: true
+        sortable: false

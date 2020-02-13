@@ -1,0 +1,5 @@
+<div class="staff-persons" id="staff-persons">
+    <?php foreach($persons as $person){
+        echo $this->makePartial('partials/staff_item', ['person' => $person]);
+    }?>
+</div>

@@ -1,0 +1,36 @@
+plugin:
+    name: 'mavitm.staff::lang.plugin.name'
+    description: 'mavitm.staff::lang.plugin.description'
+    author: Mavitm
+    icon: oc-icon-users
+    homepage: ''
+permissions:
+    manage_staff:
+        tab: 'mavitm.staff::lang.plugin.name'
+        label: 'mavitm.staff::lang.permission.manage'
+navigation:
+    main-menu-item:
+        label: 'mavitm.staff::lang.plugin.name'
+        url: mavitm/staff/staffare
+        icon: icon-users
+        permissions:
+            - manage_staff
+        sideMenu:
+            staff-menu-staff:
+                label: 'mavitm.staff::lang.plugin.name'
+                url: mavitm/staff/staffare
+                icon: icon-users
+                permissions:
+                    - manage_staff
+            staff-menu-department:
+                label: 'mavitm.staff::lang.menu.deparments'
+                url: mavitm/staff/departments
+                icon: icon-sitemap
+                permissions:
+                    - manage_staff
+            staf-menu-views:
+                label: 'mavitm.staff::lang.menu.views'
+                url: mavitm/staff/views
+                icon: icon-table
+                permissions:
+                    - manage_staff

@@ -1,0 +1,52 @@
+<div class="staff-meta">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="staff-dteail-photo">
+                <img class="img-fluid" src="{{ person.photo.getThumb(photoListW, photeListH, 'crop') }}" alt="">
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <h3 class="person-name">{{ person.name }} {{ person.surname }}</h3>
+            {% if staffSettings.show_title == 1 %}
+            <p class="person-title">{{ person.title }}</p>
+            {% endif %}
+            {% if staffSettings.show_email == 1 %}
+            <p class="person-email"><a href="mailto:{{ person.email }}"><i class="fa fa-envelope"></i> {{ person.email }}</a></p>
+            {% endif %}
+            {% if staffSettings.show_country == 1 %}
+            <p class="person-country"><i class="fa fa-map"></i> {{ person.country }} / {{ person.city }}</p>
+            {% endif %}
+            {% if staffSettings.show_dob == 1 %}
+            <p class="person-dob"><i class="fa fa-birthday-cake"></i> {{ person.dob|date("m/d/Y") }}</p>
+            {% endif %}
+
+            {% if person.other_values.links is not empty %}
+            <ul class="person-social-links row">
+                {% for brand,link in person.other_values.links if link is not empty %}
+                <li class="col"><a href="{{ link }}" target="_blank"><i class="{{ staffSettings.social_icons[brand] }}"></i></a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+<div class="staff-body">
+        {% if staffSettings.show_biography == 1 and staffSettings.show_capabilities == 1 %}
+            <div class="row">
+                <div class="col-lg-8">
+                    {% partial '@biography' %}
+                </div>
+                <div class="col-lg-4">
+                    {% partial '@capabilities' %}
+                </div>
+            </div>
+        {% elseif staffSettings.show_biography == 1 %}
+            {% partial '@biography' %}
+        {% elseif staffSettings.show_capabilities == 1 %}
+            {% partial '@capabilities' %}
+        {% endif %}
+</div>
+
+{# comment form or other things #}
+{% placeholder staffDetail %}

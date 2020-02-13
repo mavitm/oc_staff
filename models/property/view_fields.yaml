@@ -1,0 +1,9 @@
+fields:
+    name:
+        label: 'mavitm.staff::lang.view.name'
+        span: auto
+        type: text
+    partial1:
+        span: full
+        path: view
+        type: partial

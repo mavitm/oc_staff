@@ -1,0 +1,10 @@
+name: Views
+form: $/mavitm/staff/models/property/view_fields.yaml
+modelClass: Mavitm\Staff\Models\Property
+defaultRedirect: mavitm/staff/views
+create:
+    redirect: 'mavitm/staff/views/update/:id'
+    redirectClose: mavitm/staff/views
+update:
+    redirect: mavitm/staff/views
+    redirectClose: mavitm/staff/views

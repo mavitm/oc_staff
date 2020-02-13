@@ -1,0 +1,37 @@
+<?php
+  if(empty($col)){ $col = 3; }
+  if(empty($persons)){ $persons = null; }
+?>
+<div class="staff-row">
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-2">
+                <input type="hidden" class="staffrow" name="stafrow[]">
+                <div class="col-select">
+                    <select name="row-col-count[]" class="row-col-select form-control custom-select">
+                        <option value="3"><?= e(trans('mavitm.staff::lang.view.colspan'))?></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" name="row-name[]" value="<?=$name ?? '';?>" placeholder="<?= e(trans('mavitm.staff::lang.view.rowNamePlaceholder'))?>">
+            </div>
+        </div>
+        <div class="row-close"><button type="button" class="close">x</button></div>
+        <input type="hidden" class="staffids" name="row-col-persons[]" value="<?= is_array($persons) ? implode(',', $persons):'';?>">
+    </div>
+    <div class="control-row">
+
+        <?php
+            echo $this->onAddCol(null, $col, null, $persons)['data'];
+        ?>
+
+        <div class="clearfix"></div>
+    </div>
+</div>

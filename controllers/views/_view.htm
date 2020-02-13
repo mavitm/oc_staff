@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-xs-3">
+        <?=$this->makePartial("partials/departments");?>
+    </div>
+    <div class="col-xs-9">
+        <div class="staff_rows" id="staff_rows">
+            <?php if(empty($staffForm)){
+                echo $this->makePartial("partials/row");
+            }
+            else
+            {
+                echo $staffForm;
+            }
+            ?>
+        </div>
+
+
+        <div class="text-center">
+            <button type="button" id="add_staff_row" class="add_staff_row"><?= e(trans('mavitm.staff::lang.view.add_staff_row'))?></button>
+        </div>
+    </div>
+</div>
+
+<?php
+    if(!empty($formModel->id))
+    {
+        echo '<input type="hidden" name="id" value="'.$formModel->id.'">';
+    }
+?>

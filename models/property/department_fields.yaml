@@ -1,0 +1,22 @@
+fields:
+    name:
+        label: 'mavitm.staff::lang.department.name'
+        span: auto
+        type: text
+    type:
+        label: 'mavitm.staff::lang.department.type'
+        span: auto
+        default: department
+        cssClass: hidden
+        disabled: 0
+        hidden: 0
+        type: text
+    cover:
+        label: 'mavitm.staff::lang.department.cover'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload

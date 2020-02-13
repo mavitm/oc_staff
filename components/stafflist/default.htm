@@ -1,0 +1,40 @@
+<div class="page-header">{{ category.name }} {{ category.id }}</div>
+
+{% for person in persons %}
+    <div class="m-auto staff-item-max-width staff-item">
+
+        <div class="staff-photo">
+            {% if detailViewType == 'modal' %}
+                <a data-request="onViewModalPerson" data-request-data="id:{{ person.id }}" data-request-flash="">
+            {% else %}
+                <a href="{{ person.url }}">
+            {% endif %}
+                    <img src="{{ person.photo.getThumb(photoListW, photeListH, 'crop') }}" alt="">
+                </a>
+        </div>
+
+        <div class="staff-item-property">
+            <h3 class="person-name">{{ person.name }} {{ person.surname }}</h3>
+            {% if staffSettings.show_title == 1 %}
+            <p class="person-title">{{ person.title }}</p>
+            {% endif %}
+
+            {% if person.other_values.links is not empty %}
+            <ul class="person-social-links row">
+                {% for brand,link in person.other_values.links if link is not empty %}
+                <li class="col"><a href="{{ link }}" target="_blank"><i class="{{ staffSettings.social_icons[brand] }}"></i></a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+        </div>
+
+    </div>
+{% endfor %}
+
+
+
+
+{% if includeStaffModal %}
+{% partial '@modal' %}
+{% endif %}

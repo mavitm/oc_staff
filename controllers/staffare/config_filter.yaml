@@ -1,0 +1,7 @@
+scopes:
+  department:
+    label: mavitm.staff::lang.menu.deparments
+    type: group
+    modelClass: Mavitm\Staff\Models\Staff
+    options: getDepartmentIdOptions
+    conditions: department_id in (:filtered)

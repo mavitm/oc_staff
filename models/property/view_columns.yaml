@@ -1,0 +1,9 @@
+columns:
+    id:
+        label: ID
+        type: number
+        sortable: true
+    name:
+        label: 'mavitm.staff::lang.department.name'
+        type: text
+        searchable: true

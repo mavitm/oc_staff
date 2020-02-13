@@ -1,0 +1,14 @@
+columns:
+    id:
+        label: ID
+        type: number
+        sortable: true
+    name:
+        label: 'mavitm.staff::lang.department.name'
+        type: text
+        searchable: true
+        sortable: true
+    sort_order:
+        label: 'mavitm.staff::lang.department.sort_order'
+        type: number
+        sortable: true

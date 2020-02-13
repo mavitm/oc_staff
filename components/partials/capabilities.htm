@@ -1,0 +1,11 @@
+<div class="page-header">{{ 'Capabilities'|_ }}</div>
+<div class="person-capabilities">
+    {% for capabilitie in person.capabilities %}
+    <div class="form-group">
+        <label>{{ capabilitie.ability }}</label>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ capabilitie.ability_percent }}%" aria-valuenow="{{ capabilitie.ability_percent }}" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,5 @@
+title: Staff
+modelClass: Mavitm\Staff\Models\Property
+nameFrom: name
+toolbar:
+  buttons: reorder_toolbar
