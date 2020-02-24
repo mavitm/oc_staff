@@ -23,7 +23,7 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-cog',
                 'class'       => 'Mavitm\Staff\Models\Settings',
                 'order'       => 500,
-                'permissions' => ['mavitm.staff.manage_staff']
+                'permissions' => ['manage_staff']
             ]
         ];
     }
