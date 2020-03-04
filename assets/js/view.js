@@ -1,5 +1,4 @@
 function staffMove() {
-    console.log("stafMove init");
     var $persons = $("#staff-persons"),
         $cols = $(".staff-inner");
 
@@ -66,8 +65,6 @@ function staffMove() {
         var staffRow    = $(this).parents(".staff-row");
         var rowControl  = $(staffRow).find(".control-row");
         var colCount    = $(this).val();
-
-        console.log(colCount);
 
         $(".staff-col .staff-inner .person", rowControl).each(function () {
             removePerson($persons, $(this));
